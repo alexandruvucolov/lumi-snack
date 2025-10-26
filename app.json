@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Lumi Snack",
+    "slug": "lumi-snack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "lumi-snack",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a1a"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lumisnack.app",
+      "googleMobileAdsAppId": "ca-app-pub-5565395942692666~2808601554"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a1a"
+      },
+      "package": "com.lumisnack.app",
+      "googleMobileAdsAppId": "ca-app-pub-5565395942692666~2808601554"
+    },
+    "web": {
+      "favicon": "./assets/icon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5565395942692666~2808601554",
+          "iosAppId": "ca-app-pub-5565395942692666~2808601554"
+        }
+      ]
+    ]
+  }
+}
