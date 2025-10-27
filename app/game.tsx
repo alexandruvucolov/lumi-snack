@@ -720,8 +720,8 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   arrowButton: {
-    width: isSmallScreen ? 60 : 70,
-    height: isSmallScreen ? 60 : 70,
+    width: 70,
+    height: 70,
     backgroundColor: "rgba(0, 255, 255, 0.15)",
     borderRadius: 15,
     alignItems: "center",
@@ -734,14 +734,14 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
   arrowText: {
-    fontSize: isSmallScreen ? 28 : 32,
+    fontSize: 32,
     color: "#00ffff",
     textShadowColor: "#00ffff",
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
   },
   arrowSpacer: {
-    width: isSmallScreen ? 60 : 70,
+    width: 70,
   },
   gameOverOverlay: {
     ...StyleSheet.absoluteFillObject,
