@@ -6,13 +6,34 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "APP_ID": "ca-app-pub-5565395942692666~2808601554",
+        "BANNER_UNIT_ID": "ca-app-pub-5565395942692666/3850220488",
+        "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
+        "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
+        "PUBLISHER_ID": "pub-5565395942692666"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "APP_ID": "ca-app-pub-5565395942692666~2808601554",
+        "BANNER_UNIT_ID": "ca-app-pub-5565395942692666/3850220488",
+        "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
+        "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
+        "PUBLISHER_ID": "pub-5565395942692666"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "APP_ID": "ca-app-pub-5565395942692666~2808601554",
+        "BANNER_UNIT_ID": "ca-app-pub-5565395942692666/3850220488",
+        "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
+        "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
+        "PUBLISHER_ID": "pub-5565395942692666"
+      }
     }
   },
   "submit": {
