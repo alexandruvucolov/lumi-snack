@@ -142,7 +142,9 @@ export default function SettingsScreen() {
           <TouchableOpacity
             style={styles.legalButton}
             onPress={() =>
-              openLink("https://alexandruvucolov.github.io/lumi-snack/privacy-policy.html")
+              openLink(
+                "https://alexandruvucolov.github.io/lumi-snack/privacy-policy.html"
+              )
             }
           >
             <LinearGradient
@@ -157,7 +159,9 @@ export default function SettingsScreen() {
           <TouchableOpacity
             style={styles.legalButton}
             onPress={() =>
-              openLink("https://alexandruvucolov.github.io/lumi-snack/terms-and-conditions.html")
+              openLink(
+                "https://alexandruvucolov.github.io/lumi-snack/terms-and-conditions.html"
+              )
             }
           >
             <LinearGradient

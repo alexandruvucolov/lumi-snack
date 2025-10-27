@@ -27,12 +27,32 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AD_UNITS, USE_TEST_ADS } from "../constants/ads";
 
 const { width, height } = Dimensions.get("window");
+
+// Responsive sizing based on screen height
+const isSmallScreen = height < 700;
 const GRID_SIZE = 20;
-const CELL_SIZE = Math.floor((width - 40) / GRID_SIZE);
+const AVAILABLE_WIDTH = width - 40;
+
+// Calculate cell size based on available vertical space
+// Reserve space for header (~130px), instructions (~30px), controls (~200px), padding (~60px)
+const RESERVED_VERTICAL_SPACE = isSmallScreen ? 350 : 420;
+const AVAILABLE_HEIGHT = height - RESERVED_VERTICAL_SPACE;
+const MAX_CELL_SIZE = Math.min(
+  Math.floor(AVAILABLE_WIDTH / GRID_SIZE),
+  Math.floor(AVAILABLE_HEIGHT / GRID_SIZE)
+);
+
+const CELL_SIZE = MAX_CELL_SIZE;
 const GAME_WIDTH = CELL_SIZE * GRID_SIZE;
 const GAME_HEIGHT = CELL_SIZE * GRID_SIZE;
 const INITIAL_SPEED = 400;
 const SPEED_INCREMENT = 10;
+
+// Responsive spacing
+const INSTRUCTION_MARGIN = isSmallScreen ? 3 : 10;
+const CONTROLS_BOTTOM_MARGIN = isSmallScreen ? 30 : 55;
+const HEADER_PADDING_TOP = isSmallScreen ? 30 : 60;
+const HEADER_PADDING_BOTTOM = isSmallScreen ? 10 : 20;
 
 type Position = { x: number; y: number };
 type Direction = "UP" | "DOWN" | "LEFT" | "RIGHT";
@@ -581,8 +601,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     paddingHorizontal: 20,
-    paddingTop: 60,
-    paddingBottom: 20,
+    paddingTop: HEADER_PADDING_TOP,
+    paddingBottom: HEADER_PADDING_BOTTOM,
   },
   backButton: {
     width: 50,
@@ -636,6 +656,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingVertical: isSmallScreen ? 10 : 20,
   },
   gameBoard: {
     backgroundColor: "rgba(0, 0, 0, 0.3)",
@@ -685,11 +706,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#fff",
     opacity: 0.5,
-    marginBottom: 10,
+    marginBottom: INSTRUCTION_MARGIN,
     letterSpacing: 1,
   },
   controlsContainer: {
-    marginBottom: 55,
+    marginBottom: CONTROLS_BOTTOM_MARGIN,
     paddingBottom: 20,
     alignItems: "center",
     gap: 5,
@@ -699,8 +720,8 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   arrowButton: {
-    width: 70,
-    height: 70,
+    width: isSmallScreen ? 60 : 70,
+    height: isSmallScreen ? 60 : 70,
     backgroundColor: "rgba(0, 255, 255, 0.15)",
     borderRadius: 15,
     alignItems: "center",
@@ -713,14 +734,14 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
   arrowText: {
-    fontSize: 32,
+    fontSize: isSmallScreen ? 28 : 32,
     color: "#00ffff",
     textShadowColor: "#00ffff",
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
   },
   arrowSpacer: {
-    width: 70,
+    width: isSmallScreen ? 60 : 70,
   },
   gameOverOverlay: {
     ...StyleSheet.absoluteFillObject,
