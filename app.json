@@ -12,7 +12,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#0a0a1a"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.lumisnack.app",
@@ -39,6 +41,12 @@
           "iosAppId": "ca-app-pub-5565395942692666~2808601554"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "83576413-7ad1-40c6-b18d-86b7aa1e0076"
+      }
+    }
   }
 }
