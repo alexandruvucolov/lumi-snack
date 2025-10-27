@@ -135,6 +135,41 @@ export default function SettingsScreen() {
           </View>
         </View>
 
+        {/* Legal */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Legal</Text>
+
+          <TouchableOpacity
+            style={styles.legalButton}
+            onPress={() =>
+              openLink("https://alexandruvucolov.github.io/lumi-snack/privacy-policy.html")
+            }
+          >
+            <LinearGradient
+              colors={["rgba(0, 255, 255, 0.15)", "rgba(0, 255, 255, 0.05)"]}
+              style={styles.legalButtonGradient}
+            >
+              <Text style={styles.legalButtonText}>📜 Privacy Policy</Text>
+              <Text style={styles.legalButtonArrow}>→</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.legalButton}
+            onPress={() =>
+              openLink("https://alexandruvucolov.github.io/lumi-snack/terms-and-conditions.html")
+            }
+          >
+            <LinearGradient
+              colors={["rgba(255, 0, 255, 0.15)", "rgba(255, 0, 255, 0.05)"]}
+              style={styles.legalButtonGradient}
+            >
+              <Text style={styles.legalButtonText}>📋 Terms & Conditions</Text>
+              <Text style={styles.legalButtonArrow}>→</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+
         {/* Credits */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Credits</Text>
@@ -151,7 +186,9 @@ export default function SettingsScreen() {
               <Text style={styles.creditText}>
                 Built with Expo & React Native
               </Text>
-              <Text style={styles.creditText}>© 2025 Lumi Snack</Text>
+              <Text style={styles.creditText}>
+                © 2025 Atech Engineering Solutions SRL
+              </Text>
             </LinearGradient>
           </View>
         </View>
@@ -294,6 +331,29 @@ const styles = StyleSheet.create({
     opacity: 0.7,
     marginBottom: 10,
     lineHeight: 20,
+  },
+  legalButton: {
+    borderRadius: 15,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.1)",
+    marginBottom: 12,
+  },
+  legalButtonGradient: {
+    padding: 18,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  legalButtonText: {
+    fontSize: 16,
+    color: "#fff",
+    fontWeight: "600",
+  },
+  legalButtonArrow: {
+    fontSize: 20,
+    color: "#00ffff",
+    fontWeight: "bold",
   },
   creditText: {
     fontSize: 14,
