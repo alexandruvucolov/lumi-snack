@@ -13,7 +13,8 @@
         "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
         "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
         "PUBLISHER_ID": "pub-5565395942692666"
-      }
+      },
+      "node": "22.11.0"
     },
     "preview": {
       "distribution": "internal",
@@ -23,6 +24,10 @@
         "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
         "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
         "PUBLISHER_ID": "pub-5565395942692666"
+      },
+      "node": "22.11.0",
+      "android": {
+        "buildType": "apk"
       }
     },
     "production": {
@@ -33,7 +38,8 @@
         "INTERSTITIAL_UNIT_ID": "ca-app-pub-5565395942692666/2577679028",
         "REWARDED_UNIT_ID": "ca-app-pub-5565395942692666/8951515688",
         "PUBLISHER_ID": "pub-5565395942692666"
-      }
+      },
+      "node": "22.11.0"
     }
   },
   "submit": {
